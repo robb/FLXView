@@ -1,0 +1,3 @@
+[submodule "Carthage/Checkouts/css-layout"]
+	path = Carthage/Checkouts/css-layout
+	url = https://github.com/facebook/css-layout.git
