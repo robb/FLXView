@@ -48,10 +48,12 @@ NS_ASSUME_NONNULL_BEGIN
     [node layoutWithMaxWidth:self.bounds.size.width];
 
     for (FLXNode *subnode in node.children) {
-        subnode.view.frame = (CGRect){
+        CGRect frame = {
             .origin = subnode.origin,
             .size = subnode.size
         };
+
+        subnode.view.frame = CGRectIntegral(frame);
     }
 }
 

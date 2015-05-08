@@ -51,4 +51,17 @@
     XCTAssertEqual(a.frame.size.height, 100);
 }
 
+- (void)testIntegralFrames {
+    FLXView *flexView = [[FLXView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+
+    UILabel *view = [[UILabel alloc] init];
+    view.flx_layoutStrategy = [FLXLayoutStrategy fixed:CGSizeMake(20.5, 20.5)];
+    [flexView addSubview:view];
+
+    [flexView layoutSubviews];
+
+    XCTAssertEqual(view.bounds.size.width,  21);
+    XCTAssertEqual(view.bounds.size.height, 21);
+}
+
 @end
