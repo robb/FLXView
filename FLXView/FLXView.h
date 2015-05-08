@@ -1,8 +1,8 @@
 @import UIKit;
 
-FOUNDATION_EXPORT double FlexVersionNumber;
+FOUNDATION_EXPORT double FLXViewVersionNumber;
 
-FOUNDATION_EXPORT const unsigned char FlexVersionString[];
+FOUNDATION_EXPORT const unsigned char FLXViewVersionString[];
 
 #import <FLXView/FLXTypes.h>
 #import <FLXView/FLXLayoutStrategy.h>
