@@ -8,6 +8,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation FLXView
 
+#pragma mark - Lifecycle
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self == nil) return nil;
+
+    _childAlignment = FLXChildAlignmentStart;
+
+    return self;
+}
+
 #pragma mark - UIView+FLXNode
 
 - (FLXNode *)flx_generateTree {

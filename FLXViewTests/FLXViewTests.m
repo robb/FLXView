@@ -51,4 +51,17 @@
     XCTAssertEqual(a.frame.size.height, 100);
 }
 
+- (void)testDefaults {
+    FLXView *flexView = [[FLXView alloc] init];
+
+    XCTAssertEqual(flexView.childAlignment, FLXChildAlignmentStart);
+    XCTAssertEqual(flexView.direction, FLXDirectionColumn);
+    XCTAssertEqual(flexView.justification, FLXJustificationStart);
+    XCTAssertEqual(flexView.padding.top, 0);
+    XCTAssertEqual(flexView.padding.right, 0);
+    XCTAssertEqual(flexView.padding.bottom, 0);
+    XCTAssertEqual(flexView.padding.left, 0);
+    XCTAssertEqual(flexView.wrap, NO);
+}
+
 @end
