@@ -31,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setFlx_flex:(CGFloat)flex {
     self.flx_data.flex = flex;
+
+    [self.superview setNeedsLayout];
 }
 
 - (FLXLayoutStrategy *)flx_layoutStrategy {
@@ -39,6 +41,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setFlx_layoutStrategy:(FLXLayoutStrategy *)layoutStrategy {
     self.flx_data.layoutStrategy = layoutStrategy;
+
+    [self.superview setNeedsLayout];
 }
 
 - (FLXMargins)flx_margins {
@@ -47,6 +51,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setFlx_margins:(FLXMargins)margins {
     self.flx_data.margins = margins;
+
+    [self.superview setNeedsLayout];
 }
 
 - (FLXSelfAlignment)flx_selfAlignment {
@@ -55,6 +61,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setFlx_selfAlignment:(FLXSelfAlignment)selfAlignment {
     self.flx_data.selfAlignment = selfAlignment;
+
+    [self.superview setNeedsLayout];
 }
 
 @end

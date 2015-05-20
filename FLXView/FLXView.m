@@ -19,6 +19,38 @@ NS_ASSUME_NONNULL_BEGIN
     return self;
 }
 
+#pragma mark - FLXView
+
+- (void)setDirection:(FLXDirection)direction {
+    _direction = direction;
+
+    [self setNeedsLayout];
+}
+
+- (void)setChildAlignment:(FLXChildAlignment)childAlignment {
+    _childAlignment = childAlignment;
+
+    [self setNeedsLayout];
+}
+
+- (void)setJustification:(FLXJustification)justification {
+    _justification = justification;
+
+    [self setNeedsLayout];
+}
+
+- (void)setPadding:(FLXPadding)padding {
+    _padding = padding;
+
+    [self setNeedsLayout];
+}
+
+- (void)setWrap:(BOOL)wrap {
+    _wrap = wrap;
+
+    [self setNeedsLayout];
+}
+
 #pragma mark - UIView+FLXNode
 
 - (FLXNode *)flx_generateTree {
