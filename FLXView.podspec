@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/robb/FLXView.git",
                      :tag => "#{s.version}",
                      :submodules => true }
-  s.source_files  = "FLXView/**/*.{h,m}", "Carthage/Checkouts/css-layout/src/*.{h,c}"
+  s.source_files  = "FLXView/**/*.{h,m}", "Carthage/Checkouts/**/*.{h,c}"
   s.public_header_files = "FLXView/**/*.h"
 
   s.framework  = "UIKit"
