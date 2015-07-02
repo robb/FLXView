@@ -32,7 +32,7 @@ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.' }
   s.source       = { :git => "https://github.com/toto/FLXView.git",
                      :tag => "#{s.version}",
                      :submodules => true }
-  s.source_files  = "FLXView/**/*.{h,m}", "Carthage/**/*.{h,c}"
+  s.source_files  = "FLXView/**/*.{h,m}", "Carthage/**/Layout.{h,c}"
   s.public_header_files = "FLXView/**/*.h"
 
   s.framework  = "UIKit"
