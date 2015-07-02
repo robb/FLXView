@@ -9,12 +9,12 @@ Pod::Spec.new do |s|
                     It uses Facebook's [flexbox implementation](https://github.com/facebook/css-layout) and was inspired by Josh Abernathy's [SwiftBox](https://github.com/joshaber/SwiftBox).
                    DESC
 
-  s.homepage     = "https://github.com/robb/FLXView"
+  s.homepage     = "https://github.com/toto/FLXView"
   s.license      = "MIT"
   s.author       = { "Robert Böhnke" => "robb@robb.is" }
   s.platform     = :ios, "6.0"
 
-  s.source       = { :git => "https://github.com/robb/FLXView.git",
+  s.source       = { :git => "https://github.com/toto/FLXView.git",
                      :tag => "#{s.version}",
                      :submodules => true }
   s.source_files  = "FLXView/**/*.{h,m}", "Carthage/Checkouts/**/*.{h,c}"
