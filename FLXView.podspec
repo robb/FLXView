@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
                     It uses Facebook's [flexbox implementation](https://github.com/facebook/css-layout) and was inspired by Josh Abernathy's [SwiftBox](https://github.com/joshaber/SwiftBox).
                    DESC
 
-  s.homepage     = "https://github.com/toto/FLXView"
+  s.homepage     = "https://github.com/robb/FLXView"
   s.license      = { :type => 'BSD', :text => '
 Copyright (c) 2015 Robert Böhnke.
 
@@ -29,7 +29,7 @@ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.' }
   s.author       = { "Robert Böhnke" => "robb@robb.is" }
   s.platform     = :ios, "6.0"
 
-  s.source       = { :git => "https://github.com/toto/FLXView.git",
+  s.source       = { :git => "https://github.com/robb/FLXView.git",
                      :tag => "#{s.version}",
                      :submodules => true }
   s.source_files  = "FLXView/**/*.{h,m}", "Carthage/**/Layout.{h,c}"
