@@ -9,7 +9,9 @@ typedef NS_ENUM(NSInteger, FLXChildAlignment) {
 
 typedef NS_ENUM(NSInteger, FLXDirection) {
     FLXDirectionColumn = 0,
-    FLXDirectionRow = 1
+    FLXDirectionColumnReverse = 1,
+    FLXDirectionRow = 2,
+    FLXDirectionRowReverse = 3,
 };
 
 typedef NS_ENUM(NSInteger, FLXJustification) {

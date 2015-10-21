@@ -9,6 +9,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FLXNode : NSObject
 
 - (instancetype)initWithView:(UIView *)view NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @property (readwrite, nonatomic, assign) FLXChildAlignment childAlignment;
 

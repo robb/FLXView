@@ -93,7 +93,10 @@ public extension UIView {
     public func renderAsImage() -> UIImage {
         UIGraphicsBeginImageContextWithOptions(bounds.size, opaque, 0.0)
 
-        layer.renderInContext(UIGraphicsGetCurrentContext())
+        if let contextRef = UIGraphicsGetCurrentContext() {
+            layer.renderInContext(contextRef)
+        }
+
         let result = UIGraphicsGetImageFromCurrentImageContext()
 
         UIGraphicsEndImageContext()
