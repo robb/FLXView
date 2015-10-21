@@ -38,6 +38,10 @@ NS_ASSUME_NONNULL_BEGIN
     return self;
 }
 
+- (instancetype)init {
+    return [self initWithSize:CGSizeZero];
+}
+
 #pragma mark - FLXLayoutStrategy
 
 - (CGSize)sizeForView:(UIView *)view containerSize:(CGSize)containerSize maxWidth:(CGFloat)maxWidth {
@@ -49,6 +53,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FLXLayoutStrategyRelative : FLXLayoutStrategy
 
 - (instancetype)initWithBlock:(CGSize (^)(CGSize))block NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @property (readonly, nonatomic, copy) CGSize (^block)(CGSize);
 
