@@ -174,7 +174,9 @@ static css_dim_t FLXMeasure(void *contex, float maxWidth);
 }
 
 - (void)layoutWithMaxWidth:(CGFloat)maxWidth {
-    layoutNode(self.node, maxWidth);
+    FLXNode *parentNode = self.parent ?: self;
+    css_direction_t parentLayoutDirection = parentNode.node->layout.direction;
+    layoutNode(self.node, maxWidth, parentLayoutDirection);
 }
 
 @end
