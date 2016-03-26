@@ -60,6 +60,9 @@ NS_ASSUME_NONNULL_BEGIN
 
     NSMutableArray *children = [NSMutableArray arrayWithCapacity:self.subviews.count];
     for (UIView *subview in self.subviews) {
+        if (subview.hidden && !subview.flx_layoutWhenHidden)
+            continue;
+        
         [children addObject:[subview flx_generateTree]];
     }
     node.children = children;

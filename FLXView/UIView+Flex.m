@@ -65,6 +65,20 @@ NS_ASSUME_NONNULL_BEGIN
     [self.superview setNeedsLayout];
 }
 
+- (BOOL)flx_layoutWhenHidden {
+    return [objc_getAssociatedObject(self, @selector(flx_layoutWhenHidden)) boolValue];
+}
+
+- (void)setFlx_layoutWhenHidden:(BOOL)flx_layoutWhenHidden {
+    if (flx_layoutWhenHidden == self.flx_layoutWhenHidden)
+        return;
+
+    objc_setAssociatedObject(self, @selector(flx_layoutWhenHidden), @(flx_layoutWhenHidden), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+
+    if (self.hidden)
+        [self.superview layoutSubviews];
+}
+
 @end
 
 NS_ASSUME_NONNULL_END
