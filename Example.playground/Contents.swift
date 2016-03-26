@@ -84,3 +84,16 @@ flexView.addSubview(separator)
 flexView.bounds.size = flexView.sizeThatFits(CGSize(width: 320, height: CGFloat.max))
 
 flexView.renderAsImage()
+
+header.hidden = true
+
+tags.flx_layoutWhenHidden = true
+tags.hidden = true
+
+friends.flx_layoutWhenHidden = true
+friends.hidden = true
+
+flexView.bounds.size = flexView.sizeThatFits(CGSize(width: 320, height: CGFloat.max))
+
+flexView.renderAsImage()
+
