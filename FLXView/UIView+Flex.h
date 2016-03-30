@@ -16,6 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readwrite, nonatomic, assign) FLXSelfAlignment flx_selfAlignment;
 
+// Whether this view should take up space in the container FLXView when it's hidden.
+// Default: NO
+//
+@property (readwrite, nonatomic, assign) BOOL flx_layoutWhenHidden;
+
 @end
 
 NS_ASSUME_NONNULL_END
